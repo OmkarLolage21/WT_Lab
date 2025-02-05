@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number List Manager</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .container {
+        margin-top: 50px;
+      }
+      .card {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title text-center">Number List Manager</h4>
+
+          <section>
+            <div class="row mb-3">
+              <div class="col-md-8">
+                <input
+                  type="number"
+                  id="numberInput"
+                  class="form-control"
+                  placeholder="Enter a number"
+                />
+              </div>
+              <div class="col-md-4">
+                <button id="addButton" class="btn btn-primary w-100">
+                  Add Number
+                </button>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="row mb-3">
+              <div class="col-md-4">
+                <select id="numbersList" class="form-select" size="10">
+                  <option>Select a number</option>
+                </select>
+              </div>
+              <div
+                class="col-md-4 d-flex justify-content-center align-items-center"
+              >
+                <button
+                  name="SortButton"
+                  id="sortButton"
+                  class="btn btn-primary w-100"
+                >
+                  Sort
+                </button>
+              </div>
+              <div class="col-md-4">
+                <select id="sortedNumbersList" class="form-select" size="10">
+                  <option id="sortOptions">Select a number</option>
+                </select>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Search Here:</label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    id="searchInput"
+                    class="form-control"
+                    placeholder="Search number"
+                  />
+                  <button id="searchButton" class="btn btn-warning ms-1">
+                    Search
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title text-center">Words List Manager</h4>
+
+          <section>
+            <div class="row mb-3">
+              <div class="col-md-8">
+                <input
+                  type="text"
+                  id="wordInput"
+                  class="form-control"
+                  placeholder="Enter a word"
+                />
+              </div>
+              <div class="col-md-4">
+                <button id="addWordButton" class="btn btn-primary w-100">
+                  Add Word
+                </button>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="row mb-3">
+              <div class="col-md-4">
+                <select id="wordList" class="form-select" size="10">
+                  <option>Select a word</option>
+                </select>
+              </div>
+              <div
+                class="col-md-4 d-flex justify-content-center align-items-center"
+              >
+                <button
+                  name="SortWordButton"
+                  id="sortWordButton"
+                  class="btn btn-primary w-100"
+                >
+                  Sort
+                </button>
+              </div>
+              <div class="col-md-4">
+                <select id="sortedWordsList" class="form-select" size="10">
+                  <option id="sortOptions">Select a word</option>
+                </select>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Search Here:</label>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    id="searchWordInput"
+                    class="form-control"
+                    placeholder="Search a word"
+                  />
+                  <button id="searchWordButton" class="btn btn-warning ms-1">
+                    Search
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        const numbers = [];
+        const words = [];
+        let sortedNumbers = [];
+        let sortedWords = [];
+
+        const sortedNumbersList = document.getElementById("sortedNumbersList");
+        const sortedWordsList = document.getElementById("sortedWordsList");
+
+        function renderList() {
+          const list = $("#numbersList");
+          list.empty();
+          list.append("<option>Select a number</option>");
+          numbers.forEach((num, index) => {
+            list.append(
+              `<option value="${num}">${String.fromCharCode(
+                97 + index
+              )}. ${num}</option>`
+            );
+          });
+
+          const wordList = $("#wordList");
+          wordList.empty();
+          wordList.append("<option>Select a word</option>");
+          words.forEach((word, index) => {
+            wordList.append(
+              `<option value="${word}">${String.fromCharCode(
+                97 + index
+              )}. ${word}</option>`
+            );
+          });
+        }
+
+        function bubbleSort(arr) {
+          const n = arr.length;
+          for (let i = 0; i < n - 1; i++) {
+            for (let j = 0; j < n - i - 1; j++) {
+              if (arr[j] > arr[j + 1]) {
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+              }
+            }
+          }
+        }
+
+        $("#addButton").on("click", function () {
+          const number = parseInt($("#numberInput").val(), 10);
+          if (!isNaN(number)) {
+            numbers.push(number);
+            renderList();
+            $("#numberInput").val("");
+          } else {
+            alert("Please enter a valid number.");
+          }
+        });
+
+        $("#sortButton").on("click", function () {
+          sortedNumbers = [...numbers];
+          bubbleSort(sortedNumbers);
+
+          const sortedList = $("#sortedNumbersList");
+          sortedList.empty();
+          sortedList.append("<option>Select a number</option>");
+
+          sortedNumbers.forEach((num) => {
+            sortedList.append(`<option value="${num}">${num}</option>`);
+          });
+        });
+
+        $("#searchButton").on("click", function () {
+          const searchValue = parseInt($("#searchInput").val(), 10);
+          if (!isNaN(searchValue)) {
+            const index = sortedNumbers.indexOf(searchValue);
+            if (index !== -1) {
+              alert(`Number found at index: ${index}`);
+            } else {
+              alert("Number not found in the sorted list.");
+            }
+          } else {
+            alert("Please enter a valid number to search.");
+          }
+        });
+
+        $("#addWordButton").on("click", function () {
+          const word = $("#wordInput").val().trim();
+          if (word !== "") {
+            words.push(word);
+            renderList();
+            $("#wordInput").val("");
+          } else {
+            alert("Please enter a valid word.");
+          }
+        });
+
+        $("#sortWordButton").on("click", function () {
+          sortedWords = [...words];
+          bubbleSort(sortedWords);
+
+          const sortedWordList = $("#sortedWordsList");
+          sortedWordList.empty();
+          sortedWordList.append("<option>Select a word</option>");
+
+          sortedWords.forEach((word) => {
+            sortedWordList.append(`<option value="${word}">${word}</option>`);
+          });
+        });
+
+        $("#searchWordButton").on("click", function () {
+          const searchWord = $("#searchWordInput").val().trim();
+          if (searchWord !== "") {
+            const index = sortedWords.indexOf(searchWord);
+            if (index !== -1) {
+              alert(`Word found at index: ${index}`);
+            } else {
+              alert("Word not found in the sorted list.");
+            }
+          } else {
+            alert("Please enter a valid word to search.");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

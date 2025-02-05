@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TY-CS Syllabus | Modern Design</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+      color: white;
+      padding: 2rem 0;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-tabs {
+      border-bottom: 2px solid #dee2e6;
+      margin-bottom: 2rem;
+    }
+
+    .nav-tabs .nav-link {
+      color: #6c757d;
+      border: none;
+      padding: 1rem 1.5rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .nav-tabs .nav-link:hover {
+      color: #0d6efd;
+      border: none;
+      background: transparent;
+    }
+
+    .nav-tabs .nav-link.active {
+      color: #0d6efd;
+      border: none;
+      border-bottom: 3px solid #0d6efd;
+      background: transparent;
+    }
+
+    .tab-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .unit {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #0d6efd;
+    }
+
+    .unit h4 {
+      color: #0d6efd;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .section-title {
+      color: #212529;
+      font-weight: 700;
+      margin: 2rem 0 1.5rem 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #dee2e6;
+    }
+
+    .status-bar {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .course-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .course-subtitle {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.1rem;
+    }
+
+    .status-indicator {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    .status-active {
+      background-color: #198754;
+    }
+
+    .status-previous {
+      background-color: #6c757d;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header text-center">
+  <div class="container">
+    <h1 class="course-title">TY-CS Syllabus</h1>
+    <p class="course-subtitle">Comprehensive Course Structure for Third Year Computer Science</p>
+  </div>
+</div>
+
+<div class="container mb-5">
+  <ul class="nav nav-tabs" id="syllabusTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#home">Home</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#sdam">SDAM</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#wt">WT</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#daa">DAA</button>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="syllabusTabContent">
+    <div class="tab-pane fade show active" id="home">
+      <div class="text-center">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" 
+             class="img-fluid rounded shadow" alt="Computer Science" style="height: 7cm; width: 12 cm;">
+        <h2 class="mt-4">Welcome to TY-CS Curriculum</h2>
+        <p class="lead text-muted">Explore our comprehensive course structure through the tabs above</p>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="sdam">
+      <h2 class="mb-4">Software Design and Methodologies</h2>
+      
+      <h3 class="section-title">Section 1</h3>
+      <div class="unit">
+        <h4>Unit-I Basic introduction and time and space complexity analysis [4 Hours]</h4>
+        <p>Asymptotic notations (Big Oh, small oh, Big Omega, Theta notations). Best case, average case, and
+            worst-case time and space complexity of algorithms. Overview of searching, sorting algorithms.
+            Cache optimization, Adversary lower bounds (for the comparison-based sorting algorithms).
+            Using Recurrence relations and Mathematical Induction to get asymptotic bounds on
+            time complexity. Master's theorem and applications.</p>
+      </div>
+
+      <div class="unit">
+        <h4>Unit-II Divide and Conquer [4 Hours]</h4>
+        <p>General strategy, Application of divide and conquer for solution of some computational problems
+            like: Quick sort, Merge sort, Finding a majority element, Order statistics (randomized and
+            deterministic algorithms), Efficient algorithms for Integer arithmetic (Euclid's algorithm, Karatsuba's
+            algorithm for integer multiplication, fast exponentiation).</p>
+      </div>
+
+      <div class="unit">
+        <h4>Unit-III Dynamic Programming [6 Hours]</h4>
+        <p>General strategy, Application of dynamic programming for solution of some computational problems
+            like: computing Fibonacci numbers, binomial coefficients, Matrix Chain multiplication, Coin change
+            problem, 0-1 Knapsack, Traveling Salesperson Problem, Optimal Binary Search Tree construction,
+            Shortest paths in directed acyclic graphs, All pair shortest path algorithm, Longest increasing
+            subsequence problem, Largest independent set for trees.</p>
+      </div>
+      <h3 class="section-title">Section 2</h3>
+      <div class="unit">
+        <h4>Unit-IV Greedy and Backtracking strategy [4 Hours]</h4>
+        <p> Greedy: General strategy, Analysis and correctness proof of minimum spanning tree and shortest
+            path algorithms, fractional knapsack problem, conflict free scheduling, Huffman coding.
+            Backtracking: General strategy, backtracking strategy for some problems like: n-queen problem,
+            graph coloring, subset sum problem, vertex cover, independent set, solution of SUDOKU puzzle.
+            (Note: for all the strategies discussed in Units II, III, and IV the student is expected to understand the
+            essence of the strategies and not just the specific applications and should be able to apply suitable
+            strategies for fresh problems)</p>
+      </div>
+      <div class="unit">
+        <h4>Unit-V Introduction to complexity classes and NP-completeness [6 Hours]</h4>
+        <p>Unit-V Introduction to complexity classes and NP-completeness [6 Hours]
+            Complexity classes P, NP, coNP, and their interrelation, Notion of polynomial time many one
+                reductions reduction, Notion of NP-hardness and NP-completeness, Cook-Levin theorem and
+                implication to P versus NP question, NP-hardness of halting problem. NP-Complete problems (some
+                selected examples from - Satisfiability problem, Circuit-SAT, 3-CNF SAT, vertex cover problem,
+                independent set problem, clique problem, Hamiltonian-circuit problem, subset sum problem, Integer
+                Linear Programming (ILP)). Brief introduction to Linear Programming and modeling NP-complete
+                problems using ILP.</p>
+      </div>
+      <div class="unit">
+        <h4>Unit-VI Introduction to Randomized and Approximation algorithms [4 Hours]</h4>
+        <p>Introduction to randomness in computation, Las-Vegas and Monte-Carlo algorithms, Abundance of
+            witnesses/solutions and application of randomization, solving SAT for formulas with "many"
+            satisfying assignments, randomized quick sort, Karger‘s Min-cut algorithm, coupon collector
+            problem.
+            Introduction to Approximation algorithms for NP-optimization problems, Approximation algorithm
+            for Vertex Cover, metric Traveling-Sales-Person Problem (metric-TSP), Hardness of approximation
+            for TSP. Introduction to quantum computation.</p>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="wt">
+      <h2 class="mb-4">Web Technology</h2>
+      <h3 class="section-title">Section 1</h3>
+      <div class="unit">
+        <h4>Unit-I Front End Tools 04 Hours</h4>
+        <p>Introduction: Internet and WWW, Web site planning and design issues. HTML5: structure of html
+        document, HTML elements: headings, paragraphs, line break, styles, colors, fonts, links, frames,
+        lists, tables, images and forms, CSS, Bootstrap, XML, JSON.</p>
+      </div>
+
+      <div class="unit">
+        <h4>Unit-II Client-Side Technologies 06 Hours</h4>
+        <p>JavaScript: Overview of JavaScript, Data types, Control Structures, Arrays, Functions and Scopes,
+        HTML5 forms Validation, Objects in JS, flex, DOM: DOM levels, DOM Objects and their properties
+        and methods, Manipulating DOM. JQuery: Introduction to JQuery, Loading JQuery, selecting
+        elements, changing styles, creating elements, appending elements, removing elements, handling
+        events, Introduction to POSTMAN usages.</p>
+      </div>
+
+      <div class="unit">
+        <h4>Unit-III Server-Side Technologies 04 Hours</h4>
+        <p>PHP: Introduction to PHP, Features, sample code, PHP script working, PHP syntax, conditions &
+        Loops, Functions, String manipulation, Arrays & Functions, Form handling, Cookies & Sessions,
+        File Handling, Exception Handling, E-mail validations, MySQL with PHP, Laravel - The PHP
+        Framework For Web Artisans. Introduction and usage of web3.0</p>
+      </div>
+      <h3 class="section-title">Section 2</h3>
+      <div class="unit">
+        <h4>Unit-IV Spring Boot 06 Hours</h4>
+        <p>Spring Framework, Spring Boot Framework, Installing Spring Boot, Build Tool Maven/Gradle/Ant,
+        Core Features, Spring Security, Web Applications, JPA for database connectivity, working with SQL
+        and NoSQL, Messaging, Testing, Deploying Spring Boot Applications, Monitoring and Testing.
+        POSTMAN Tool for API testing.</p>
+      </div>
+      <div class="unit">
+        <h4>Unit-V React 04 Hours</h4>
+        <p>Introduction to React, React component, JSX, Render function, Component API, Component
+        lifecycle, State, Props, Mixins, Component composition, Pass data from parent to child, Pass data
+        from child to parent, Component styling, Forms, Events, Refs, Keys, Router, Flux, Redux.</p>
+      </div>
+      <div class="unit">
+        <h4>Unit-VI Node JS 04 Hours</h4>
+        <p>Introduction to Node JS, Installation of Node JS, Node JS Modules, Node Package Manager (NPM),
+        Creating Web server, File System, Express JS, Serving Static Resources, Database connectivity.</p>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="daa">
+      <h2 class="mb-4">Design and Analysis of Algorithms</h2>
+      <h3 class="section-title">Section 1</h3>
+      <div class="unit">
+        <h4>Unit-I Basic introduction and time and space complexity analysis [4 Hours]</h4>
+        <p>Asymptotic notations (Big Oh, small oh, Big Omega, Theta notations). Best case, average case, and
+        worst-case time and space complexity of algorithms. Overview of searching, sorting algorithms.
+        Cache optimization, Adversary lower bounds (for the comparison-based sorting algorithms).
+        Using Recurrence relations and Mathematical Induction to get asymptotic bounds on
+        time complexity. Master's theorem and applications.</p>
+      </div>
+
+      <div class="unit">
+        <h4>Unit-II Divide and Conquer [4 Hours]</h4>
+        <p>General strategy, Application of divide and conquer for solution of some computational problems
+        like: Quick sort, Merge sort, Finding a majority element, Order statistics (randomized and
+        deterministic algorithms), Efficient algorithms for Integer arithmetic (Euclid's algorithm, Karatsuba's
+        algorithm for integer multiplication, fast exponentiation).</p>
+      </div>
+
+      <div class="unit">
+        <h4>Unit-III Dynamic Programming [6 Hours]</h4>
+        <p>General strategy, Application of dynamic programming for solution of some computational problems
+        like: computing Fibonacci numbers, binomial coefficients, Matrix Chain multiplication, Coin change
+        problem, 0-1 Knapsack, Traveling Salesperson Problem, Optimal Binary Search Tree construction,
+        Shortest paths in directed acyclic graphs, All pair shortest path algorithm, Longest increasing
+        subsequence problem, Largest independent set for trees.</p>
+      </div>
+      <h3 class="section-title">Section 2</h3>
+      <div class="unit">
+        <h4>Unit-IV Greedy and Backtracking strategy [4 Hours]</h4>
+        <p>Greedy: General strategy, Analysis and correctness proof of minimum spanning tree and shortest
+        path algorithms, fractional knapsack problem, conflict free scheduling, Huffman coding.
+        Backtracking: General strategy, backtracking strategy for some problems like: n-queen problem,
+        graph coloring, subset sum problem, vertex cover, independent set, solution of SUDOKU puzzle.
+        (Note: for all the strategies discussed in Units II, III, and IV the student is expected to understand the
+        essence of the strategies and not just the specific applications and should be able to apply suitable
+        strategies for fresh problems)</p>
+        </div>
+      <div class="unit">
+        <h4>Unit-V Introduction to complexity classes and NP-completeness [6 Hours]</h4>
+        <p>Complexity classes P, NP, coNP, and their interrelation, Notion of polynomial time many one
+        reductions reduction, Notion of NP-hardness and NP-completeness, Cook-Levin theorem and
+        implication to P versus NP question, NP-hardness of halting problem. NP-Complete problems (some
+        selected examples from - Satisfiability problem, Circuit-SAT, 3-CNF SAT, vertex cover problem,
+        independent set problem, clique problem, Hamiltonian-circuit problem, subset sum problem, Integer
+        Linear Programming (ILP)). Brief introduction to Linear Programming and modeling NP-complete
+        problems using ILP.</p>
+      </div>
+      <div class="unit">
+        <h4>Unit-VI Introduction to Randomized and Approximation algorithms [4 Hours]</h4>
+        <p>Introduction to randomness in computation, Las-Vegas and Monte-Carlo algorithms, Abundance of
+        witnesses/solutions and application of randomization, solving SAT for formulas with "many"
+        satisfying assignments, randomized quick sort, Karger's Min-cut algorithm, coupon collector
+        problem.
+        Introduction to Approximation algorithms for NP-optimization problems, Approximation algorithm
+        for Vertex Cover, metric Traveling-Sales-Person Problem (metric-TSP), Hardness of approximation
+        for TSP. Introduction to quantum computation.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="status-bar">
+    <div class="row">
+      <div class="col-md-6">
+        <p class="act mb-0">
+          <span class="status-indicator status-active"></span>
+          <b>Active Tab</b>: <span></span>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <p class="prev mb-0">
+          <span class="status-indicator status-previous"></span>
+          <b>Previous Tab</b>: <span></span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.nav-tabs button').on('shown.bs.tab', function(event){
+    var x = $(event.target).text().trim();        
+    var y = $(event.relatedTarget).text().trim(); 
+    $(".act span:not(.status-indicator)").text(x);
+    $(".prev span:not(.status-indicator)").text(y);
+  });
+});
+</script>
+
+</body>
+</html>

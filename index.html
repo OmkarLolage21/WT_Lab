@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+    crossorigin="anonymous"
+  >
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background-color: #0d6efd;
+      color: white;
+      padding: 50px 0;
+      border-radius: 10px;
+    }
+    .hero-section h2 {
+      font-weight: 700;
+    }
+    .hero-section p {
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+    .hero-section img {
+      border: 5px solid white;
+    }
+
+    /* Section Headings */
+    .section-heading {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0d6efd;
+      margin-bottom: 30px;
+    }
+
+    /* Qualifications Section */
+    .list-group-item {
+      background-color: #ffffff;
+      border: none;
+      padding: 15px 20px;
+      font-size: 1rem;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    .list-group-item ul {
+      padding-left: 20px;
+    }
+    .list-group-item ul li {
+      margin-bottom: 5px;
+    }
+
+    /* Projects Section */
+    #scrollspyHeading2 p, #scrollspyHeading3 p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Contact Section */
+    .contact-info p {
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+    .contact-info a {
+      text-decoration: none;
+      color: #0d6efd;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold ms-4" href="#">Omkar Lolage</a>
+      <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto me-4">
+          <li class="nav-item">
+            <a class="nav-link active" href="#scrollspyHeading1">Qualification</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading3">Contact Me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="hero-section container mt-5 pt-5 text-center">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center">
+        <img src="profile.jpg" class="rounded-circle img-fluid" width="200" alt="Profile Picture">
+      </div>
+      <div class="col-md-6 text-md-start mt-4 mt-md-0">
+        <h2>Omkar Lolage</h2>
+        <p><strong>Email:</strong> <a href="mailto:omkar.lolage22@vit.edu" class="text-white">omkar.lolage22@vit.edu</a></p>
+        <p><strong>Contact:</strong> 7397988498</p>
+      </div>
+    </div>
+  </div>
+  <div 
+    data-bs-spy="scroll" 
+    data-bs-target=".navbar" 
+    data-bs-smooth-scroll="true" 
+    class="scrollspy-example container my-5" 
+    tabindex="0"
+  >
+    <div id="scrollspyHeading1" class="mb-5">
+      <h2 class="section-heading text-center">Educational Qualifications</h2>
+      <ul class="list-group">
+        <li class="list-group-item">I am a Third-Year Computer Engineering Student at VIT-Pune.</li>
+        <li class="list-group-item">Bachelor of Technology (B.Tech), Computer Science Engineering</li>
+        <li class="list-group-item">Vishwakarma Institute of Technology, Pune (November 2022 – June 2026)</li>
+        <li class="list-group-item">Currently studying in Third Year (CGPA: 9.06).</li>
+        <li class="list-group-item">
+          Relevant Coursework: Database Management Systems, Object-Oriented Programming, Data Science, Data Structures, Advanced Data Structures, Operating Systems, Computer Networks, Web Technology, Compiler Design.
+        </li>
+        <li class="list-group-item">
+          <strong>Achievements:</strong>
+          <ul>
+            <li>Finalist at Barclays Hack-O-Hire'2024 conducted by Barclays.</li>
+            <li>Winner of Technosphinx-2024 Hackathon organized by Cummins College of Engineering, Pune.</li>
+            <li>Winner of Internal SIH'24 Hackathon organized by VIT, Pune.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div id="scrollspyHeading2" class="mb-5">
+      <h2 class="section-heading text-center">Projects Done</h2>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <div class="card h-100  shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">InboxIQ</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Barclays Hack-O-Hire '24 Finalist</h6>
+              <p class="card-text">
+                Implemented an Outlook Add-in that allows custom routing of emails fetched from an exchange server based on 
+            the category assigned by the ML model running as a web job notified by an HTTP trigger via Azure Logic Apps 
+            on email arrival in the inbox, leveraging DistilBERT for classification based on content. 
+                <br><br><strong>Technologies:</strong> Microsoft Graph API, PyTorch, Python.
+                <br><strong>Github: </strong><a href="https://github.com/Aaditatgithub/InboxIQ-Barclays-HackOHire-24" style="text-decoration: none;">Link</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Cirrhologix</h5>
+              <h6 class="card-subtitle mb-2 text-muted">A Liver Cirrhosis Predictor</h6>
+              <p class="card-text">
+                Implemented data science pipeline. Pre-processed the data with more than 70% null values and 16+ features.  
+                Used R for implementation and ShinyApp for deployment. Experimented with 5+ Machine Learning algorithms 
+                and effectively attained the prediction accuracy increment by 40% and overall accuracy of 94%.
+                <br><br><strong>Technologies:</strong> R, RStudio
+                <br><strong>Github: </strong><a href="https://omkar-datascience-projects.shinyapps.io/Liver-Cirrhosis-Predictor/" style="text-decoration: none;">Link</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Engage-O-Commerce</h5>
+              <h6 class="card-subtitle mb-2 text-muted">MERN Stack E-Commerce Platform</h6>
+              <p class="card-text">
+                Developed a MERN stack e-commerce platform with social proof, influencer marketing to increase sales and 
+                implemented pagination to reduce API data volume and improve server response times. Implemented role-based access control (RBAC) for admins and users, advanced filter and search functionality, 
+                and API versioning for seamless updates and compatibility.               
+                <br><br><strong>Technologies:</strong>ReactJs, NodeJs, MongoDB, ExpressJs.
+                <br><strong>Github: </strong><a href="https://github.com/OmkarLolage21/Engage-O-Commerce.git" style="text-decoration: none;">Link</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>   
+    <div id="scrollspyHeading3">
+      <h2 class="section-heading text-center">Contact Me</h2>
+      <div class="contact-info text-center">
+        <p>Feel free to get in touch with me for collaborations, project inquiries, or any professional opportunities.</p>
+        <p><strong>Email:</strong> <a href="mailto:omkar.lolage22@vit.edu">omkar.lolage22@vit.edu</a></p>
+        <p><strong>Phone:</strong> 7397988498</p>
+      </div>
+    </div>
+  </div> 
+
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+AMvyTG2xPfnBBv1+AMSTsnVf8PVk" 
+    crossorigin="anonymous">
+  </script>
+</body>
+</html>

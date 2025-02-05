@@ -1,0 +1,26 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "axe/aria": [
+      "default",
+      {
+        "aria-required-children": "off",
+        "aria-required-parent": "off"
+      }
+    ],
+    "axe/structure": [
+      "default",
+      {
+        "listitem": "off"
+      }
+    ],
+    "axe/text-alternatives": [
+      "default",
+      {
+        "image-alt": "off"
+      }
+    ]
+  }
+}
